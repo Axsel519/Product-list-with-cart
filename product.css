@@ -1,0 +1,708 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scrollbar-width:auto;
+}
+
+:root{
+
+    --Red: hsl(14, 86%, 42%);
+    --Green: hsl(159, 69%, 38%);
+    --Rose50: hsl(20, 50%, 98%);
+    --Rose100: hsl(13, 31%, 94%);
+    --Rose300: hsl(14, 25%, 72%);
+    --Rose400: hsl(7, 20%, 60%);
+    --Rose500: hsl(12, 20%, 44%);
+    --Rose900: hsl(14, 65%, 9%);
+    --Font-size-product-names: 16px;
+
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 600;
+    background-color: var(--Rose100);
+
+}
+
+main {
+    display: flex;
+    padding: 5vh 3vw;
+    align-items: flex-start;
+}
+
+
+h1 {
+    font-weight: 700;
+    padding-bottom: 5vh;
+    color: var(--Rose900);
+}
+
+
+img {
+    width: 20vw;
+    border-radius: 2vw;
+}
+
+.lef {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, calc(101% / 3));
+    margin-top: -4vh;
+    justify-content: end;
+    align-items: center;
+    justify-items: stretch;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+/*Start Buttons*/
+
+.buttons {
+    margin-top: 6vh;
+}
+
+button {
+    width: 12vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2vh 1vw;
+    margin: -11vh 4vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    border:2px solid var(--Rose300);
+}
+
+button img{
+    width: 1.5vw;
+}
+
+button p{
+    padding-bottom: 0;
+}
+
+.butt.active {
+    display: none;
+    margin-top: -11vh;
+    position: relative;
+    background-color: var(--Red);
+    border: 2px solid var(--Red);
+    color: var(--Rose50);
+    justify-content: space-evenly;
+}
+
+.butt.active img {
+    border-radius: 5vw;
+    border: 2px solid var(--Rose50);
+    height: 20px;
+}
+
+.butt.active img:active {
+    background-color: var(--Rose50);
+}
+
+/*End Buttons*/
+
+/*Start Text*/
+
+.text {
+    margin-right: 5vw;
+}
+
+.text p{
+    color: var(--Rose400);
+    font-weight: 500;
+    padding-bottom:1vh ;
+}
+
+h2{
+    font-size: var(--Font-size-product-names);
+    padding-bottom:1vh ;
+
+}
+
+strong{
+    font-weight: 700;
+    color:var(--Red);
+}
+
+/*End Text*/
+
+/*Right Order*/
+
+.right {
+    background-color: var(--Rose50);
+    padding: 2vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25vw;
+    border-radius: 1vw;
+    min-height: 43vh;
+}
+
+.right h1{
+    color: var(--Red);
+}
+
+.before {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vh 2vw;
+    padding-bottom: 5vh;
+}
+
+.before img {
+    width: 10vw;
+    position: absolute;
+    right: 14vw;
+}
+
+.before p {
+    color: var(--Rose400);
+    font-weight: 600;
+    position: absolute;
+    top: 42vh;
+    left: 70vw;
+}
+
+.after {
+    padding-bottom: 27vh;
+}
+
+.icon {
+    width: 23vw;
+    background-color: var(--Rose100);
+    border-radius: 1vw;
+    padding: 3vh 1vw;
+    position: relative;
+    top: 5vh;
+    display: none;
+}
+
+.icon img {
+    display: inline;
+    vertical-align: middle; 
+    margin-right: 8px;
+    width: 2vw;
+  }
+
+  .icon p {
+    display: inline;
+  }
+
+.confirm {
+    background-color: var(--Red);
+    color: var(--Rose50);
+    width: 15vw;
+    border: 2px;
+    position: relative;
+    top: 9vw;
+    display: none;
+}
+
+.card{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333a1;
+    padding: 3vh 2vw;
+    border-radius: 1vw;
+    min-height: 30vh;
+    display: none;
+}
+
+.card img{
+    width: 3vw;
+}
+
+.card p{
+    color: var(--Rose300);
+    font-weight: 500;
+    margin-top: -3vh;
+}
+
+.succeed {
+    display: none;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20231226/pngtree-textured-backdrop-sky-blue-paper-with-a-beautifully-crumpled-appearance-image_13876126.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .succeed h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  mark{
+    padding: 1vh 1vw;
+  }
+
+
+  .done {
+    position: absolute;
+    top: 37vh;
+    background-color: var(--Red);
+    border: 2px;
+    color: var(--Rose50);
+    width: 15vw;
+    left: 0vw;
+
+}
+
+hr{
+    border: 1px solid var(--Rose100);
+
+}
+
+.order-item {
+    padding-bottom: 3vh;
+}
+
+p {
+    padding-bottom: 1vh;
+}
+
+img.remove-item-icon {
+    margin-top: -2vh;
+    border: 2px solid var(--Rose300);
+    border-radius: 30vw;
+}
+
+#orderTotal {
+    padding-top: 3vh;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@media screen and (min-width:320px) and (max-width: 600px) {
+
+
+    main {
+        display: flex;
+        padding: 5vh 10vw;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3vh;
+    }
+
+    /*All potos*/
+
+    .waffle .top .image-h {
+        content: url(product-list-with-cart-main/assets/images/image-waffle-mobile.jpg);
+        width: 70vw;
+    }
+
+    .vanilla .top .image-h {
+        content: url(product-list-with-cart-main/assets/images/image-creme-brulee-mobile.jpg);
+        width: 70vw;
+    }
+
+    .macaron .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-macaron-mobile.jpg);
+        width: 70vw;
+    }
+
+    .tiramisu .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-tiramisu-mobile.jpg);
+        width: 70vw;
+    }
+
+    .baklava .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-baklava-mobile.jpg);
+        width: 70vw;
+    }
+
+   .pie .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-meringue-mobile.jpg);
+        width: 70vw;
+    }
+
+    .cake .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-cake-mobile.jpg);
+        width: 70vw;
+    }
+
+    .brownie .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-brownie-mobile.jpg);
+        width: 70vw;
+    }
+
+    .panna .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-panna-cotta-mobile.jpg);
+        width: 70vw;
+    }
+
+    button {
+        width: 40vw;
+        margin: -10vh 15vw;
+        border-radius: 10vw;
+    }
+
+    button img {
+        width: 4.5vw;
+    }
+
+    .before {
+        padding: 0vh 2vw;
+        padding-bottom: 2vh;
+    }
+
+    .before p {
+        top: 25vh;
+        left: 1vw;
+        position: relative;
+        font-size: 4vw;
+    }
+
+    .before img {
+        width: 32vw;
+        right: 35vw;
+        margin-top: -2vh;
+    }
+
+    .right {
+        width: 75vw;
+        padding: 2vh 4vw;
+    }
+
+
+    .icon {
+        width: 65vw;
+        padding: 3vh 3vw;
+        top: 6vh;
+    }
+
+    .icon img {
+        width: 6vw;
+    }
+
+    .icon p {
+        font-size: 3vw;
+    }
+
+    .confirm {
+        width: 46vw;
+        top: 42vw;
+        left: -3vw;
+        top: 22vh;
+    }
+
+    .card {
+        width: 85vw;
+        padding: 4vh 7vw;
+    }
+
+    .card p {
+        margin-top: 1vh;
+    }
+
+    .card img {
+        width: 7vw;
+    }
+
+    .done {
+        width: 50vw;
+        left: 1vw;
+    }
+
+    h1 {
+        padding-bottom: 2vh;
+        font-size: 7vw;
+    }
+
+    img.remove-item-icon {
+        margin-right: 8vh;
+    }
+
+    
+}
+
+@media screen and (min-width:601px) and (max-width: 768px) {
+
+
+    .waffle .top .image-h,
+    .vanilla .top .image-h,
+    .macaron .top .image-h,
+    .tiramisu .top .image-h,
+    .baklava .top .image-h,
+   .pie .top .image-h,
+    .cake .top .image-h,
+    .brownie .top .image-h,
+    .panna .top .image-h {
+        width: 30vw;
+    }
+
+    button {
+        width: 25vw;
+        margin: -9vh 2vw;
+        border-radius: 11vw;
+    }
+
+    button img {
+        width: 3vw;
+    }
+
+    body{
+        font-size: 2vw;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% / 3));
+        position: relative;
+        left: 0vw;
+    }
+
+    h2 {
+        font-size: small;
+    }
+
+    main {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 5vh 0vw;
+
+    }
+
+    .right {
+        width: 90vw;
+        min-height: 40vh;
+        margin: 0vh 2vw;
+    }
+
+    .right h1 {
+        font-size: 5vw;
+    }
+
+    .before img {
+        width: 28vw;
+        position: absolute;
+        right: 40vw;
+        margin-top: -8vh;
+    }
+
+    .before p {
+        top: 25vh;
+        left: 10vw;
+        font-size: x-large;
+        position: relative;
+    }
+
+    .text {
+        margin-right: 0vw;
+    }
+
+    .top {
+        padding: 5px;
+    }
+
+    .butt.active {
+        margin-top: -9vh;
+    }
+
+    .icon {
+        width: 82vw;
+        padding: 3vh 3vw;
+        top: 8vh;
+    }
+
+    .icon img {
+        width: 5vw;
+    }
+
+    .icon p {
+        font-size: large;
+    }
+
+    .confirm {
+        width: 40vw;
+        border: 2px;
+        top: 19vw;
+        left: 20vw;
+    }
+
+    .done {
+        width: 50vw;
+        left: 7vw;
+    }
+
+    .card {
+        width: 70vw;
+    }
+
+    .card p {
+        margin-top: 1vh;
+        font-size: large;
+    }
+
+    .card img {
+        width: 5vw;
+    }
+
+}
+
+@media screen and (min-width:768px)  and (max-width: 1024px) {
+
+    .waffle .top .image-h {
+        content: url(product-list-with-cart-main/assets/images/image-waffle-tablet.jpg);
+        width: 28vw;
+    }
+
+    .vanilla .top .image-h {
+        content: url(product-list-with-cart-main/assets/images/image-creme-brulee-tablet.jpg);
+        width: 28vw;
+    }
+
+    .macaron .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-macaron-tablet.jpg);
+        width: 28vw;
+    }
+
+    .tiramisu .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-tiramisu-tablet.jpg);
+        width: 28vw;
+    }
+
+    .baklava .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-baklava-tablet.jpg);
+        width: 28vw;
+    }
+
+   .pie .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-meringue-tablet.jpg);
+        width: 28vw;
+    }
+
+    .cake .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-cake-tablet.jpg);
+        width: 28vw;
+    }
+
+    .brownie .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-brownie-tablet.jpg);
+        width: 28vw;
+    }
+
+    .panna .top .image-h{
+        content: url(product-list-with-cart-main/assets/images/image-panna-cotta-tablet.jpg);
+        width: 28vw;
+    }
+
+    main {
+        display: flex;
+        padding: 5vh 0vw;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu {
+        grid-template-columns: repeat(3, calc(106% / 3));
+        margin-right: -7vw;
+    }
+
+    button {
+        width: 20vw;
+        margin: -9vh 4vw;
+        border-radius: 10vw;
+
+    }
+
+    button img {
+        width: 2.5vw;
+    }
+
+    .before p {
+        color: var(--Rose400);
+        font-weight: 600;
+        position: relative;
+        top: 28vh;
+        left: 0vw;
+        font-size: x-large;
+    }
+
+    .before img {
+        width: 25vw;
+        position: absolute;
+        right: 14vw;
+    }
+
+    .right {
+        padding: 2vh 1vw;
+        width: 90vw;
+        height: 41vh;
+        min-height: 41vh;
+    }
+
+    .top {
+        padding: 5px;
+    }
+
+    .icon {
+        width: 85vw;
+        top: 4vh;
+    }
+
+    .confirm {
+        width: 40vw;
+        top: 16vw;
+        left: 18vw;
+    }
+
+    .icon img {
+        margin-right: 120px;
+        width: 5vw;
+    }
+
+    .icon p {
+        font-size: x-large;
+    }
+
+    .done {
+        top: 35vh;
+        width: 20vw;
+        left: 1vw;
+    }
+
+    .butt.active {
+        margin-top: -9vh;
+    }
+
+    
+}
+
+
+
